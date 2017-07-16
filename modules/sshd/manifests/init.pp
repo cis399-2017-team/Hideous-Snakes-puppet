@@ -1,15 +1,20 @@
-class sshd{
+class ssh{
 	package {
-		"ssh": ensure => installed;
+		"sshd": ensure => installed;
 	}
 	service { 
 		"ssh":	enable	=> true,			#automatically start at boot
-			ensure  => running; 			#restart service if its not running
+			ensure  => 'running'; 			#restart service if its not running
+			require => Package['openssh-server'],	#requires the ssh package
 	}
 	file {
 		"/etc/ssh/sshd_config":
-			source => ["puppet:///modules/ssh/ssh_config"],			#I think this is the right source
-			notify => File[/etc/ssh/sshd_config"],"Changes to sshd_config";	#I think this is what is meant by "notifying sshd when it changes"
+			source => ["puppet:///modules/ssh/ssh_config"], #I think this is the right source
+			notify  => Service['sshd'],			#I think this is what is meant by "notifying sshd when it changes"
+			mode    => '0600',
+    			owner   => 'root',
+    			group   => 'root',
+			require => Package['openssh-server'],
 	}
 
 	ssh_authorized_key { "nboyd-key-pair-oregon":
