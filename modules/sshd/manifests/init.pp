@@ -1,10 +1,10 @@
 class ssh{
 	package {
-		"sshd": ensure => installed;
+		"sshd": ensure => installed,
 	}
 	service { 
 		"ssh":	enable	=> true,			#automatically start at boot
-			ensure  => 'running'; 			#restart service if its not running
+			ensure  => 'running', 			#restart service if its not running
 			require => Package['openssh-server'],	#requires the ssh package
 	}
 	file {
