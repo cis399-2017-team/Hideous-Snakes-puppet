@@ -1,5 +1,5 @@
 node ip-10-0-7-246 {
-	insert ssh
+	insert sshd
 }
 
 node ip-10-0-7-136 {
