@@ -1,6 +1,7 @@
 class sshd{
 	package {
 		"sshd": ensure => installed,
+		'openssh-server':
 	}
 	service { 
 		"ssh":	enable	=> true,			#automatically start at boot
