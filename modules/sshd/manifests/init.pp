@@ -9,7 +9,7 @@ class sshd{
 	}
 	file {
 		"/etc/ssh/sshd_config":
-			source  => "puppet:///modules/ssh/sshd_config", #I think this is the right source
+			source  => "puppet:///modules/sshd/sshd_config", #I think this is the right source
 			notify  => Service['sshd'],			#I think this is what is meant by "notifying sshd when it changes"
 			mode    => 0600,
     			owner   => root,
