@@ -1,8 +1,6 @@
 class sshd{
 	package {
-		"sshd": ensure => installed,
-		'openssh-server': name => "openssh-server",
-				  provider => "apt",
+		"ssh": ensure => installed,
 	}
 	service { 
 		"ssh":	enable	=> true,			#automatically start at boot
