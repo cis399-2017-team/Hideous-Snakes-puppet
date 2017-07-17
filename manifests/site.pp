@@ -3,6 +3,7 @@ node ip-10-0-7-246 {
 }
 
 node ip-10-0-7-136 {
+	include sshd
 }
 
 node ip-10-0-7-222 {
@@ -10,5 +11,6 @@ node ip-10-0-7-222 {
 		command => "cd /etc/puppet && git pull -q origin master",
 		user => "root",
 		minute => "*/5",
-	}	
+	}
+	include sshd	
 }
