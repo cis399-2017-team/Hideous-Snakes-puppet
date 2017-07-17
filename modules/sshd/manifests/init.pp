@@ -3,13 +3,13 @@ class sshd{
 	'openssh-server':
 	}
 	service { 
-		"ssh":	enable	=> true,			#automatically start at boot
+		"sshd":	enable	=> true,			#automatically start at boot
 			ensure  => 'running', 			#restart service if its not running
 			require => Package['openssh-server'],	#requires the ssh package
 	}
 	file {
 		"/etc/ssh/sshd_config":
-			source => ["puppet:///modules/ssh/ssh_config"], #I think this is the right source
+			source => ["puppet:///modules/sshd/sshd_config"], #I think this is the right source
 			notify  => Service['sshd'],			#I think this is what is meant by "notifying sshd when it changes"
 			mode    => '0600',
     			owner   => 'root',
