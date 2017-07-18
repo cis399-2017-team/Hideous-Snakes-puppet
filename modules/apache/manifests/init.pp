@@ -1,4 +1,4 @@
-class 'apache' {
+class apache {
 	exec { 'apt-update':
 		command => '/usr/bin/apt-get update'
 	}
@@ -11,15 +11,15 @@ class 'apache' {
 	service { 'apache2':
 		ensure => running,
 		enable => true,
-		require => [ Package['apache2'], File["/etc/apache2/httpd.conf"] ],
+		require => [ Package['apache2'], File["/etc/apache2/apache2.conf"] ],
 		subscribe => File["/etc/apache2/httpd.conf"],
 		hasstatus => true,
 		hasrestart => true,
 	}
 
-	file { "httpd.conf":
+	file { "apache2.conf":
 		ensure => present,
-		path => "/etc/apache2/httpd.conf",
+		path => "/etc/apache2/apache2.conf",
  		source => "puppet:///modules/apache_httpd/files/service.conf",
 		mode => 0640,
 		owner => root,
