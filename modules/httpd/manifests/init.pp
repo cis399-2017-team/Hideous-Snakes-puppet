@@ -1,6 +1,6 @@
-class { "httpd": 
+class httpd { 
 	package { 'apache2': 
-		ensure => latest;
+		ensure => latest
 	}
 
 	service { "httpd":
