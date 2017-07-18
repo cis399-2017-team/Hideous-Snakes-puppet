@@ -1,5 +1,5 @@
 class { "httpd": 
-	package { 'apache': 
+	package { 'apache2': 
 		ensure => latest;
 	}
 
@@ -14,8 +14,8 @@ class { "httpd":
 
 	file { "httpd.conf":
 		ensure => present,
-		path => "/etc/apache2/httpd.conf"
-		source => "puppet:///modules/apache_httpd/files/service.conf"
+		path => "/etc/apache2/sites-enabled",
+ 		source => "puppet:///modules/apache_httpd/files/service.conf"
 		mode => 0640,
 		owner => root,
 		group => root,

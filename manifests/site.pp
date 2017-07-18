@@ -1,9 +1,11 @@
 node ip-10-0-7-246 {
 	include sshd
+	include httpd
 }
 
 node ip-10-0-7-136 {
 	include sshd
+	include httpd
 }
 
 node ip-10-0-7-222 {
