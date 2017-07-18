@@ -15,7 +15,7 @@ class apache {
 	file { "httpd.conf":
 		ensure => present,
 		path => "/etc/apache2/httpd.conf",
- 		source => "puppet:///modules/apache/files/httpd.conf",
+ 		source => "puppet:///modules/apache/httpd.conf",
 		mode => 0640,
 		owner => root,
 		group => root,
