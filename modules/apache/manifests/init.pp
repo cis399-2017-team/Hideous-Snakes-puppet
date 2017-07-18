@@ -1,10 +1,5 @@
 class apache {
-	exec { "apt-update":
-		command => '/usr/bin/apt-get update'
-	}
-	
 	package { "apache2": 
-		require => Exec['apt-update'],
 		ensure => installed,
 	}
 
@@ -28,8 +23,3 @@ class apache {
 	}	
 }
 
-apache::vhost { '10.0.7.246:80':
-	port => '80',
-	ServerName => "boa.com",
-	docroot => '/var/www/first',
-}
