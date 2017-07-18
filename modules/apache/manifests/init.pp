@@ -6,16 +6,16 @@ class apache {
 	service { "apache2":
 		ensure => running,
 		enable => true,
-		require => [ Package['apache2'], File["/etc/apache2/apache2.conf"] ],
+		require => [ Package['apache2'], File["/etc/apache2/httpd.conf"] ],
 		subscribe => File["/etc/apache2/httpd.conf"],
 		hasstatus => true,
 		hasrestart => true,
 	}
 
-	file { "htppd.conf":
+	file { "httpd.conf":
 		ensure => present,
-		path => "/etc/apache2/htppd.conf",
- 		source => "puppet:///modules/apache/files/htppd.conf",
+		path => "/etc/apache2/httpd.conf",
+ 		source => "puppet:///modules/apache/files/httpd.conf",
 		mode => 0640,
 		owner => root,
 		group => root,
