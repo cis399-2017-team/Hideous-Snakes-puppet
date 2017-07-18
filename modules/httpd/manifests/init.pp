@@ -1,9 +1,14 @@
-class httpd { 
+class 'apache' {
+	exec { 'apt-update':
+		command => '/usr/bin/apt-get update'
+	}
+	
 	package { 'apache2': 
-		ensure => latest
+		require => Exec['apt-update'],
+		ensure => installed,
 	}
 
-	service { "httpd":
+	service { 'apache2':
 		ensure => running,
 		enable => true,
 		require => [ Package['apache2'], File["/etc/apache2/httpd.conf"] ],
@@ -14,7 +19,7 @@ class httpd {
 
 	file { "httpd.conf":
 		ensure => present,
-		path => "/etc/apache2/sites-enabled",
+		path => "/etc/apache2/httpd.conf",
  		source => "puppet:///modules/apache_httpd/files/service.conf",
 		mode => 0640,
 		owner => root,
