@@ -15,7 +15,7 @@ class httpd {
 	file { "httpd.conf":
 		ensure => present,
 		path => "/etc/apache2/sites-enabled",
- 		source => "puppet:///modules/apache_httpd/files/service.conf"
+ 		source => "puppet:///modules/apache_httpd/files/service.conf",
 		mode => 0640,
 		owner => root,
 		group => root,
