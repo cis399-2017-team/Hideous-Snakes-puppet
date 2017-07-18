@@ -27,3 +27,9 @@ class 'apache' {
 		require => Package['apache2'],
 	}	
 }
+
+apache::vhost { '10.0.7.246:80':
+	port => '80',
+	ServerName => "boa.com",
+	docroot => '/var/www/first',
+}
