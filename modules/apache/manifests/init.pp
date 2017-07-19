@@ -20,6 +20,12 @@ class apache {
 		owner => root,
 		group => root,
 		require => Package['apache2'],
-	}	
+	}
+	file { 'html.dir': 
+		ensure => directory,
+		path => "/var/www/",
+		require => Package['apache2'],
+		recurse => true,
+	} 	
 }
 
