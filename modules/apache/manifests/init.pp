@@ -26,6 +26,8 @@ class apache {
 		path => "/var/www/",
 		require => Package['apache2'],
 		recurse => true,
+		owner => root,
+		group => root,
 	} 	
 }
 
