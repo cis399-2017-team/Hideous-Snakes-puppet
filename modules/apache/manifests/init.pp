@@ -21,12 +21,13 @@ class apache {
 		group => root,
 		require => Package['apache2'],
 	}
-	file { '/var/www/html/': 
+	file { '/var/www/': 
 		ensure => directory,
 		require => Package['apache2'],
 		recurse => true,
 		owner => root,
 		group => root,
+		source => puppet:///modules/apache/html/",
 	} 	
 }
 
