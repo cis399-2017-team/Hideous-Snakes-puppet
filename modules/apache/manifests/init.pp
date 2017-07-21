@@ -27,7 +27,7 @@ class apache {
 		recurse => true,
 		owner => root,
 		group => root,
-		source => puppet:///modules/apache/html/",
+		source => "puppet:///modules/apache/html/",
 		mode => 0640,
 	} 	
 }
