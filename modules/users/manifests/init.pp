@@ -1,13 +1,17 @@
 ## Template for later use!!!##
 class users {
+	 group { 'classmate':
+		 name => 'classmate',
+		 ensure => 'present',
+  	}
+
 	user { 'fakef':
 		ensure  => 'present',
-		comment => 'Fake Fakenstine,,,',
-		gid     => '1001',
-		groups  => ['sudo', 'video'],
-		home    => '/home/fake',
+		comment => 'Fake Fakenstine',
+		groups  => ['classmate'],
+		home    => '/home/ubuntu/classFunhouse',
 		shell   => '/bin/bash',
-		uid     => '1001',
+		expiry => '2017-08-15',
 		purge_ssh_keys => true,
 	}
 	ssh_authorized_key {
