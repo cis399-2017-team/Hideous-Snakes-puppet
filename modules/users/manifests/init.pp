@@ -14,7 +14,7 @@ class users {
 		expiry => '2017-08-15',
 		purge_ssh_keys => true,
 	}
-	ssh_authorized_key {
+	ssh_authorized_key {'Fake Fakenstine':
 		ensure  => 'present',
 		type    => 'ssh-rsa',
 		user    => 'fake',
