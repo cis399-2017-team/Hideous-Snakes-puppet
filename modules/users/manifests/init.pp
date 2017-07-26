@@ -19,6 +19,5 @@ class users {
 		type    => 'ssh-rsa',
 		user    => 'fake',
 		key     => 'insertRealKeyHere',
-		
 	}
 }
