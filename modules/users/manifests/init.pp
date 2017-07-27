@@ -20,4 +20,8 @@ class users {
 		user    => 'fakef',
 		key     => 'ThisIsAFakeKey',
 	}
+	file { '/home/fakef':
+		ensure => 'directory',
+		mode => '0777',
+	}
 }
