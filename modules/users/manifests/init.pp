@@ -30,6 +30,7 @@ class users {
 		comment => 'alphabet',
 		groups  => ['classmate'],
 		home    => '/home/nsato10',
+		managehome => 'true',
 		shell   => '/bin/bash',
 		expiry => '2017-08-15',
 		purge_ssh_keys => true,
