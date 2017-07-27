@@ -27,7 +27,7 @@ class users {
 	
 	user { 'nsato10':
 		ensure  => 'present',
-		comment => 'alphabet[11:14]',
+		comment => 'alphabet',
 		groups  => ['classmate'],
 		home    => '/home/nsato10',
 		shell   => '/bin/bash',
@@ -47,7 +47,7 @@ class users {
 	
 	user { 'mister_person':
 		ensure  => 'present',
-		comment => 'alphabet[11:14]',
+		comment => 'alphabet',
 		groups  => ['classmate'],
 		home    => '/home/mister_person',
 		shell   => '/bin/bash',
