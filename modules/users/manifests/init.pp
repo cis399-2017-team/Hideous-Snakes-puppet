@@ -22,6 +22,8 @@ class users {
 	}
 	file { '/home/fakef':
 		ensure => 'directory',
+		owner  => 'fakef',
+
 	}
 	
 	user { 'nsato10':
@@ -42,6 +44,7 @@ class users {
 	}
 	file { '/home/nsato10':
 		ensure => 'directory',
+		owner  => 'nsato10',
 	}
 	
 	user { 'mister_person':
@@ -61,6 +64,7 @@ class users {
 	}
 	file { '/home/mister_person':
 		ensure => 'directory',
+		owner  => 'mister_person',
 	}
 	
 	user { 'cplachno':
@@ -80,6 +84,7 @@ class users {
 	}
 	file { '/home/cplachno':
 		ensure => 'directory',
+		owner  => 'cplanchno',
 	}
 	
 	user { 'Vino':
@@ -99,6 +104,7 @@ class users {
 	}
 	file { '/home/Vino':
 		ensure => 'directory',
+		owner  => 'Vino',
 	}
 
 	user { 'cnf':
@@ -118,6 +124,7 @@ class users {
 	}
 	file { '/home/cnf':
 		ensure => 'directory',
+		owner  => 'cnf',
 	}
 	
 	user { 'pogrebinsky':
@@ -137,6 +144,7 @@ class users {
 	}
 	file { '/home/pogrebinsky':
 		ensure => 'directory',
+		owner  => 'pogrebinsky',
 	}
 	
 	user { 'jdolan':
@@ -156,6 +164,7 @@ class users {
 	}
 	file { '/home/jdolan':
 		ensure => 'directory',
+		owner  => 'jdolan',
 	}
 	
 	user { 'jsheabia':
@@ -175,6 +184,7 @@ class users {
 	}
 	file { '/home/jsheabia':
 		ensure => 'directory',
+		owner  => 'jsheabia',
 	}
 	
 	user { 'dholstege':
@@ -194,6 +204,7 @@ class users {
 	}
 	file { '/home/dholstege':
 		ensure => 'directory',
+		owner  => 'dholstege',
 	}
 	
 	user { 'jemin':
@@ -213,6 +224,7 @@ class users {
 	}
 	file { '/home/jemin':
 		ensure => 'directory',
+		owner  => 'jemin',
 	}
 	
 	user { 'Steven':
@@ -232,6 +244,7 @@ class users {
 	}
 	file { '/home/Steven':
 		ensure => 'directory',
+		owner  => 'Steven',
 	}
 
 	user { 'Meni':
@@ -251,6 +264,7 @@ class users {
 	}
 	file { '/home/Meni':
 		ensure => 'directory',
+		owner  => 'Meni',
 	}
 	
 	user { 'stevev':
@@ -290,6 +304,7 @@ class users {
 	}
 	file { '/home/mhebeler':
 		ensure => 'directory',
+		owner  => 'mhebeler',
 	}
 	user { 'aziz94shh':
 		ensure  => 'present',
@@ -308,6 +323,7 @@ class users {
 	}
 	file { '/home/aziz94shh':
 		ensure => 'directory',
+		owner  => 'aziz94shh',
 	}
 	user { 'levishutts':
 		ensure  => 'present',
@@ -326,6 +342,7 @@ class users {
 	}
 	file { '/home/levishutts':
 		ensure => 'directory',
+		owner  => 'levishutts',
 	}
 	user { 'houllette':
 		ensure  => 'present',
@@ -344,6 +361,7 @@ class users {
 	}
 	file { '/home/houllette':
 		ensure => 'directory',
+		owner  => 'houllette',
 	}
 	
 	user { 'slynch':
@@ -363,6 +381,7 @@ class users {
 	}
 	file { '/home/slynch':
 		ensure => 'directory',
+		owner  => 'slynch',
 	}
 
 }
