@@ -264,6 +264,7 @@ class users {
 	}
 	file { '/home/stevev':
 		ensure => 'directory',
+		owner  => 'stevev',
 	}
 	ssh_authorized_key {'stevev':
 		ensure  => 'present',
