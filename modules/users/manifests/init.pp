@@ -22,7 +22,7 @@ class users {
 	}
 	file { '/home/fakef':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'nsato10':
@@ -43,7 +43,7 @@ class users {
 	}
 	file { '/home/nsato10':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'mister_person':
@@ -63,7 +63,7 @@ class users {
 	}
 	file { '/home/mister_person':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'cplachno':
@@ -83,7 +83,7 @@ class users {
 	}
 	file { '/home/cplachno':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'Vino':
@@ -103,7 +103,7 @@ class users {
 	}
 	file { '/home/Vino':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 
 	user { 'cnf':
@@ -123,7 +123,7 @@ class users {
 	}
 	file { '/home/cnf':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'pogrebinsky':
@@ -143,7 +143,7 @@ class users {
 	}
 	file { '/home/pogrebinsky':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'jdolan':
@@ -163,7 +163,7 @@ class users {
 	}
 	file { '/home/jdolan':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'jsheabia':
@@ -183,7 +183,6 @@ class users {
 	}
 	file { '/home/jsheabia':
 		ensure => 'directory',
-		mode => '0777',
 	}
 	
 	user { 'dholstege':
@@ -203,7 +202,7 @@ class users {
 	}
 	file { '/home/dholstege':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'jemin':
@@ -223,7 +222,7 @@ class users {
 	}
 	file { '/home/jemin':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 	
 	user { 'Steven':
@@ -243,7 +242,7 @@ class users {
 	}
 	file { '/home/Steven':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 
 	user { 'Meni':
@@ -263,7 +262,7 @@ class users {
 	}
 	file { '/home/Meni':
 		ensure => 'directory',
-		mode => '0777',
+		mode => '0750',
 	}
 
 }
