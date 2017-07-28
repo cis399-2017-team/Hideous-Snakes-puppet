@@ -23,7 +23,7 @@ class users {
 	file { '/home/fakef':
 		ensure => 'directory',
 		owner  => 'fakef',
-
+		group  => 'classmate',
 	}
 	
 	user { 'nsato10':
