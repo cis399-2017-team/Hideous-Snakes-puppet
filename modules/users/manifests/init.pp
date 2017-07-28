@@ -264,5 +264,122 @@ class users {
 		ensure => 'directory',
 		mode => '0750',
 	}
+	
+	user { 'stevev':
+		ensure  => 'present',
+		comment => 'Professor',
+		groups  => ['classmate'],
+		home    => '/home/stevev',
+		shell   => '/bin/bash',
+		expiry => '2017-08-15',
+		purge_ssh_keys => true,
+	}
+	ssh_authorized_key {'stevev':
+		ensure  => 'present',
+		type    => 'ssh-rsa',
+		user    => 'stevev',
+		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAACAQDN0n7TZj/XUCs4ywvPLHfAFTHHkzFbxTW5GuHXMWIyrb7M84ySFSswd2n45Kh2IQey7sd97V0dj/EENKvy+5FCyyTTLWmnTXzTLMeb5qpV6Xful5vt6KjHd41ZAT2pKoK+yAjcTDRdMFq0QYDUEFug8ETv1/wPsJPgCLAlp0kJWJq8Q7AqmdCs+NilLvKKZUu62AMWNdNwDDBHCKgtn8TzgsEIxOgFgrrAXz+UdW5z4DLcmGx7wkdAAM0Q18ohC6L0WayiceGHuC/vHfHNklHOWoBF5L8YWRdGKEN40LMiu//31uuXrmV3ZrudbyhsRcWXr5dukbqD43PpsBzIOo3080FyZJWeLOpbE/6VsrNNlOtroKnuO+mIWOVsBQCH5R3UPwwxTtf8yyO7GvNm2HjRBgGLGXql3RhqIpTEVUfzXqadX+b/v8ChuBjYtegr2CWhs85qGj/2gNanZjfE8NJVa8OymuiQi5boRGsoDKXY1F7hnaZNL4CYyW1yAp44evDyohp/E9+YY3I/RdUfZ/apelHIVNXL4bx25oPUT7/jqqJi3RcyDQugZLH55QWiE1NkFqJqwTif6b6hcsdhIlVuNhzuXKneTm74PCQ13Ui1nY9mx00wjnG6bXiHLy1mKXshl7i8LX9aK7hAzTeSWPnKJpJ2+UeLrywEp3FKsRbt1Q==',
+	}
+	file { '/home/stevev':
+		ensure => 'directory',
+		mode => '0750',
+	}
+	
+	user { 'mhebeler':
+		ensure  => 'present',
+		comment => 'Alphabet',
+		groups  => ['classmate'],
+		home    => '/home/mhebeler',
+		shell   => '/bin/bash',
+		expiry => '2017-08-15',
+		purge_ssh_keys => true,
+	}
+	ssh_authorized_key {'mhebeler':
+		ensure  => 'present',
+		type    => 'ssh-rsa',
+		user    => 'mhebeler',
+		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDDH3nBikuyiSC0+UitI7n/wFinh1M8bOAiDFUUUM3o6T3wcOXkH7yRU9WWePrRH2BUjsd0KKW3O39m5Gdq0TouncEyk2gfWY8J9mkYDpdJ8FxWYEvIQhhjFHWCpk/5EH9Cqic3NMwRyt5CeddnzdutFnTg2dmsEuKqAc1pMGm6LVPMWtazuIuRexGWAV/tL6nSqhs9+nYNQsoyQuK25gBOLQEF8+tnACPClmUzBfjSAFREbhe0WveTeUUXKA6SXXTJambB6cvYTWDQ6hEaxzs94hDUehJB/V8o0S45gB/t/9IfKXmjt5dMLM4TKB8GZRicnsAufGrrtuW/moCvzkp9',
+	}
+	file { '/home/mhebeler':
+		ensure => 'directory',
+		mode => '0750',
+	}
+	user { 'aziz94shh':
+		ensure  => 'present',
+		comment => 'Binary Boiz',
+		groups  => ['classmate'],
+		home    => '/home/aziz94shh',
+		shell   => '/bin/bash',
+		expiry => '2017-08-15',
+		purge_ssh_keys => true,
+	}
+	ssh_authorized_key {'aziz94shh':
+		ensure  => 'present',
+		type    => 'ssh-rsa',
+		user    => 'aziz94shh',
+		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQC8lqY5aml/XobpKeMnjHVlmTlz2d3QxP6AVSrPCvOjzWz9T0UN/llnedRoU9CpX6hgash5danUijlkhtX6Aiaqj/vWG6JOxddZOr/+ln20B6GxKFi8yy59lSGwhqfLATSxKu4//DeAj+GIExw2x6LDY0qt1a0047B4elIhBE+cHN2QvayOxwb0lP4ub5yaNChC/LO2xFU2rgvnEfANqWeeqPtHuQVaSsDdwpkiYIk4rhmX4q2XVv+ZLgJyEYSNm7QRx/cotcmq37iWkKTmq/tlpYDiSLSitUqBdMwz73yQ8uhDR0uIfVrdkilIdF7edEsHIUoqtEU0QpzQHi1nh3NH',
+	}
+	file { '/home/aziz94shh':
+		ensure => 'directory',
+		mode => '0750',
+	}
+	user { 'levishutts':
+		ensure  => 'present',
+		comment => 'Binary Boiz',
+		groups  => ['classmate'],
+		home    => '/home/levishutts',
+		shell   => '/bin/bash',
+		expiry => '2017-08-15',
+		purge_ssh_keys => true,
+	}
+	ssh_authorized_key {'levishutts':
+		ensure  => 'present',
+		type    => 'ssh-rsa',
+		user    => 'levishutts',
+		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCQ3/5pTJx1/rMPLpSEQeXII66gdY8+xcXkAuBdlOwLHx7DzsyFNWTqSwN8Px1eNZwpQw2MQgLK2B+qrrDh8IOHa5fgL6eXvT8qnkxTILvPLGu1XBR76YidTC6a71R9xkdf0teIK99FxVu0GX13Hmh1rLPoK0egCsrcGjqbu9boTDhpajFwD44ekuc+lRv01lfJ6iDUA0Gl1xn4k7HmgFQ67Oh28G4hWVT9TpeakGX0eJ2nXMTbBOfHj8d0OFIaoKjQfhTMiRftvVoQUFnyUjj7xHyKmwJep31onZClxZJQYTpmL0QiPTpSI/J3mQ7NUrXAYXszrchMMge51mENhEQx',
+	}
+	file { '/home/levishutts':
+		ensure => 'directory',
+		mode => '0750',
+	}
+	user { 'houllette':
+		ensure  => 'present',
+		comment => 'Hot Shame',
+		groups  => ['classmate'],
+		home    => '/home/houllette',
+		shell   => '/bin/bash',
+		expiry => '2017-08-15',
+		purge_ssh_keys => true,
+	}
+	ssh_authorized_key {'houllette':
+		ensure  => 'present',
+		type    => 'ssh-rsa',
+		user    => 'houllette',
+		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCVs/6140OKWU4CBCR8H/eDSxeAOhlyQzuv6X4xv4PxW0425s5Rz/pXKPv5OfZdA0WTBEBCHkrxC2Kn2n7IId25kqhckI5T6W0F3LLcmFXkE5kxzbGICgeXRHAewozv8TrK3pbMIJCbnTEnkqXkf72FFuog36GbbHuKE60qCYrF5h4oQ6gfXvBfhjxusfb4hdi3H84dQrG4IK9yyr5o2U1b5cV4kP/jt9wjiZapWSxcvbvsgftRdTrRx5Bru0Jfn+bKcPH9UKFplDQTC0HbCzPQ5242J9vt/wBubPPdevw1SukvdOAIE8tXSZhmJodNkmBLOZy+NXjK7cXxFcdGeCwd',
+	}
+	file { '/home/houllette':
+		ensure => 'directory',
+		mode => '0750',
+	}
+	
+	user { 'slynch':
+		ensure  => 'present',
+		comment => 'Segmentation Squad',
+		groups  => ['classmate'],
+		home    => '/home/slynch',
+		shell   => '/bin/bash',
+		expiry => '2017-08-15',
+		purge_ssh_keys => true,
+	}
+	ssh_authorized_key {'slynch':
+		ensure  => 'present',
+		type    => 'ssh-rsa',
+		user    => 'slynch',
+		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCsfkdPqW0Vm6T5PcQYaBid7eXpd3wK54x9Qq50tDYenN1CfyTIM6mEJYYxtIpKwV5oqMiJLJ4PyfpuWCpl1DjIvFhnFtpv8p50yc3ZNNQvNbGhpSMp2G6RmTnmsSmTLk3FEThd4OIfhWCCawd3WaJbSQqyjg5ymr/VYj+rYauC0nT19VHrgqw2lr/HVItXTt0N6JTu01WLTvs75n988OLLkSeJL7pycFfo8ve+pK8phANsUNos42dug+8zQwHo4tqsWNh+o1tMCrOcoQjgOSIXyS9EuAkg8sE37cAoYZ3RT3zZoz+c1qtRg6Bjp/u7Hac+ac28cYzQt2/ja0oQRdil',
+	}
+	file { '/home/slynch':
+		ensure => 'directory',
+		mode => '0750',
+	}
 
 }
