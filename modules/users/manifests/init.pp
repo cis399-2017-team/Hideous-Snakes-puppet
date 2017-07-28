@@ -84,7 +84,7 @@ class users {
 	}
 	file { '/home/cplachno':
 		ensure => 'directory',
-		owner  => 'cplanchno',
+		owner  => 'cplachno',
 	}
 	
 	user { 'Vino':
