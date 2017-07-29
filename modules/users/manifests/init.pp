@@ -12,7 +12,7 @@ class users {
 		shell   => '/bin/bash',
         	purge_ssh_keys => true,
 	    	managehome => true,
-		home   => 'home/fakef',
+		home   => '/home/fakef',
 	}
 	ssh_authorized_key {'Fake Fakenstine':
 		type    => 'ssh-rsa',
