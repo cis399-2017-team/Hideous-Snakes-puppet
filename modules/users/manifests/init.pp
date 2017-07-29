@@ -11,7 +11,6 @@ class users {
 		groups  => ['classmate'],
 		home    => '/home/fakef',
 		shell   => '/bin/bash',
-		expiry => '2017-08-15',
 		purge_ssh_keys => true,
 	}
 	ssh_authorized_key {'Fake Fakenstine':
@@ -33,7 +32,6 @@ class users {
 		home    => '/home/nsato10',
 		managehome => 'true',
 		shell   => '/bin/bash',
-		expiry => '2017-08-15',
 		purge_ssh_keys => true,
 	}
 	ssh_authorized_key {'nsato10':
@@ -53,7 +51,6 @@ class users {
 		groups  => ['classmate'],
 		home    => '/home/mister_person',
 		shell   => '/bin/bash',
-		expiry => '2017-08-15',
 		purge_ssh_keys => true,
 	}
 	ssh_authorized_key {'mister_person':
