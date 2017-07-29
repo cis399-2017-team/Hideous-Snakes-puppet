@@ -11,7 +11,6 @@ class users {
 		groups  => ['classmate'],
 		home    => '/home/fakef',
 		shell   => '/bin/bash',
-		purge_ssh_keys => true,
 	    	managehome => true,
 	}
 	ssh_authorized_key {'Fake Fakenstine':
