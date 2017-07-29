@@ -9,12 +9,12 @@ class users {
 		ensure  => 'present',
 		comment => 'Fake Fakenstine',
 		groups  => ['classmate'],
-		home    => '/home/fakef',
 		shell   => '/bin/bash',
+        	purge_ssh_keys => true,
 	    	managehome => true,
+		home   => 'home/fakef',
 	}
 	ssh_authorized_key {'Fake Fakenstine':
-		ensure  => 'present',
 		type    => 'ssh-rsa',
 		user    => 'fakef',
 		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDTXfzIWZlGglEQu9vr3gaMYg4We34PHk2S1oejSEEiRvlVALdDXRuHp0s3mqAPgL9ClQhvefntWgwwNQ4jCyfvYxZfw8+gHvS8HjyszbwCNnVfk3y1k4fUyo+HrRmX9jow1Qkf0Ut/YFsx9RT0dOr+bQ5w/2YOjLwb78OyGkh48Sb4ucPhZhMmmr7KlD6wC66XNWG9WvozHwsHXcR8ZLQjEAfb5LQ3Tdt2Gf7ykMBHapF1nyk7yoPJvMuyhgJV3uRSsmxYrwOJyQOhzY8PHl3AplY6DqcvnXbvsxe0uJxHaVBHWVCyk7AIcGHs8TfRTtezP8umajrB2ZAC9SKwQGL/',
