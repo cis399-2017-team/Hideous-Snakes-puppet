@@ -1,8 +1,7 @@
 class motd {
-	file {'motd':
+	file {'/etc/motd':
 		ensure => file,
-		name => '/etc/motd',
-		mode => '0664',
+		mode => '0644',
 		owner => 'root',
 		group => 'root',
 		content => template('motd/motd.erb')
