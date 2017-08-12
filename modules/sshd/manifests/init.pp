@@ -12,6 +12,7 @@ class sshd{
 			source  => "puppet:///modules/sshd/sshd_config", #I think this is the right source
 			notify  => Service['ssh'],			#I think this is what is meant by "notifying sshd when it changes"
 			mode    => 0640,
+			PasswordAuthentication => yes,
     			owner   => root,
     			group   => root,
 			require => Package['openssh-server'],
