@@ -4,7 +4,6 @@ class fakeFreeze {
 	}
 	
 	file { "helloWorld.c":
-		path => INSERT SOMETHING HERE,
 		source => "puppet:///modules/fakeFreeze/helloWorld.c",
 		mode => 0777,
 		owner => root,
