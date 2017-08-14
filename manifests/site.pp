@@ -18,7 +18,7 @@ node ip-10-0-7-222 {
 		user => "root",
 		minute => "*/5",
 	}
-	cron {
+	cron { "restore state":
 		command => "rsync -avz --delete /etc/puppet/modules/fakeFreeze/files/files root@ec2-34-208-231-112.us-west-2.compute.amazonaws.com:/home/fakef",
 		user => "root",
 		hour => "23",
