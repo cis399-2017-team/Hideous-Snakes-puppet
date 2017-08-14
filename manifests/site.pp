@@ -1,4 +1,9 @@
 node ip-10-0-7-246 {
+	cron {"user clean":
+		command => "rm `ls -la | grep 'fakef' | awk ' { print $9 } '`",
+		user => "root",
+		hour => "23",
+	}
 	include sshd
 	include apache
 	include users
