@@ -21,19 +21,19 @@ node ip-10-0-7-222 {
 	}
 	
 	cron{ "sync fake1":
-                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files/files root@10-0-7-246:/home/fake1",
+                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files root@10-0-7-246:/home/fake1",
                 user => "root",
                 hour => "23",
         }
 
         cron{ "sync fake2":
-                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files/files root@10-0-7-246:/home/fake2",
+                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files root@10-0-7-246:/home/fake2",
                 user => "root",
                 hour => "23",
         }
 
         cron{ "sync fake3":
-                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files/files root@10-0-7-246:/home/fake3",
+                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files root@10-0-7-246:/home/fake3",
                 user => "root",
                 hour => "23",
         }
