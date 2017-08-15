@@ -7,9 +7,14 @@ class fakeFreeze {
 		ensure => latest,
 	}
 
-	cron{
-                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files/files root@10-0-7-222:/home/fakef",
+	cron{ "sync fake1":
+                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files/files root@10-0-7-246:/home/fake1",
 		user => "root",
 		hour => "23",
 	}
+	cron {"user clean":
+                command => "find /tmp -user fakef -delete",
+                user => "root",
+                hour => "23",
+        }
 }

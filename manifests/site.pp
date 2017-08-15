@@ -1,9 +1,4 @@
 node ip-10-0-7-246 {
-	cron {"user clean":
-		command => "find /tmp -user fakef -delete",
-		user => "root",
-		hour => "23",
-	}
 	include sshd
 	include apache
 	include users
