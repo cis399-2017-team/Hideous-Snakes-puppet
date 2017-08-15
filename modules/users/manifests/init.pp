@@ -14,7 +14,7 @@ class users {
 		home   => '/home/fake1',
 		uid    => '1111',
 	}
-	ssh_authorized_key {'Fake Fakenstine':
+	ssh_authorized_key {'Fake 1':
 		type    => 'ssh-rsa',
 		user    => 'fake1',
 		key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDTXfzIWZlGglEQu9vr3gaMYg4We34PHk2S1oejSEEiRvlVALdDXRuHp0s3mqAPgL9ClQhvefntWgwwNQ4jCyfvYxZfw8+gHvS8HjyszbwCNnVfk3y1k4fUyo+HrRmX9jow1Qkf0Ut/YFsx9RT0dOr+bQ5w/2YOjLwb78OyGkh48Sb4ucPhZhMmmr7KlD6wC66XNWG9WvozHwsHXcR8ZLQjEAfb5LQ3Tdt2Gf7ykMBHapF1nyk7yoPJvMuyhgJV3uRSsmxYrwOJyQOhzY8PHl3AplY6DqcvnXbvsxe0uJxHaVBHWVCyk7AIcGHs8TfRTtezP8umajrB2ZAC9SKwQGL/',
@@ -27,9 +27,9 @@ class users {
                 purge_ssh_keys => true,
                 managehome => true,
                 home   => '/home/fake2',
-                uid    => '1111',
+                uid    => '1112',
         }
-        ssh_authorized_key {'Fake Fakenstine':
+        ssh_authorized_key {'Fake 2':
                 type    => 'ssh-rsa',
                 user    => 'fake2',
                 key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDTXfzIWZlGglEQu9vr3gaMYg4We34PHk2S1oejSEEiRvlVALdDXRuHp0s3mqAPgL9ClQhvefntWgwwNQ4jCyfvYxZfw8+gHvS8HjyszbwCNnVfk3y1k4fUyo+HrRmX9jow1Qkf0Ut/YFsx9RT0dOr+bQ5w/2YOjLwb78OyGkh48Sb4ucPhZhMmmr7KlD6wC66XNWG9WvozHwsHXcR8ZLQjEAfb5LQ3Tdt2Gf7ykMBHapF1nyk7yoPJvMuyhgJV3uRSsmxYrwOJyQOhzY8PHl3AplY6DqcvnXbvsxe0uJxHaVBHWVCyk7AIcGHs8TfRTtezP8umajrB2ZAC9SKwQGL/',
@@ -42,9 +42,9 @@ class users {
                 purge_ssh_keys => true,
                 managehome => true,
                 home   => '/home/fake3',
-                uid    => '1111',
+                uid    => '1113',
         }
-        ssh_authorized_key {'Fake Fakenstine':
+        ssh_authorized_key {'Fake 3':
                 type    => 'ssh-rsa',
                 user    => 'fake3',
                 key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDTXfzIWZlGglEQu9vr3gaMYg4We34PHk2S1oejSEEiRvlVALdDXRuHp0s3mqAPgL9ClQhvefntWgwwNQ4jCyfvYxZfw8+gHvS8HjyszbwCNnVfk3y1k4fUyo+HrRmX9jow1Qkf0Ut/YFsx9RT0dOr+bQ5w/2YOjLwb78OyGkh48Sb4ucPhZhMmmr7KlD6wC66XNWG9WvozHwsHXcR8ZLQjEAfb5LQ3Tdt2Gf7ykMBHapF1nyk7yoPJvMuyhgJV3uRSsmxYrwOJyQOhzY8PHl3AplY6DqcvnXbvsxe0uJxHaVBHWVCyk7AIcGHs8TfRTtezP8umajrB2ZAC9SKwQGL/',
