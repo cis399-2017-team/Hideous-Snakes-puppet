@@ -3,6 +3,7 @@ node ip-10-0-7-246 {
 	include apache
 	include users
 	include motd
+	include fakeFreeze
 }
 
 node ip-10-0-7-136 {
@@ -10,6 +11,7 @@ node ip-10-0-7-136 {
 	include apache
 	include users
 	include motd
+	include fakeFreeze
 }
 
 node ip-10-0-7-222 {
