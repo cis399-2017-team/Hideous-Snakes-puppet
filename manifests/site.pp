@@ -8,6 +8,7 @@ node ip-10-0-7-246 {
 	include apache
 	include users
 	include motd
+	include fakeFreeze
 }
 
 node ip-10-0-7-136 {
@@ -22,11 +23,6 @@ node ip-10-0-7-222 {
 		command => "cd /etc/puppet && git pull -q origin master",
 		user => "root",
 		minute => "*/5",
-	}
-	cron { "restore state":
-		command => "rsync -avz --delete /etc/puppet/modules/fakeFreeze/files/files root@ec2-34-208-231-112.us-west-2.compute.amazonaws.com:/home/fakef",
-		user => "root",
-		hour => "23",
 	}
 	include sshd	
 }
