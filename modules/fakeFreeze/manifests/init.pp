@@ -1,6 +1,6 @@
 #This module is used to clean user files from the system every so often
 
-class 'fakeFreeze' {
+class fakeFreeze {
   cron { 'clean fake1':
     command => 'find /tmp -user fake1 -delete && find /var/tmp -user fake1 -delete',
     user => 'root',
