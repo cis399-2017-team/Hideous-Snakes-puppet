@@ -13,7 +13,7 @@ class fakeFreeze {
 		hour => "23",
 	}
 	cron {"user clean":
-                command => "find /tmp -user fakef -delete",
+                command => "find /tmp -user fake1 -delete",
                 user => "root",
                 hour => "23",
         }
