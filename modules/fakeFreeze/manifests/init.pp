@@ -1,12 +1,4 @@
 class fakeFreeze {
-	package { "rysnc":
-		ensure => latest,
-	}
-
-	package { "build-essentials":
-		ensure => latest,
-	}
-
 	cron {"clean fake1":
                 command => "find /tmp -user fake1 -delete && find /var/tmp -user fake1 -delete",
                 user => "root",
