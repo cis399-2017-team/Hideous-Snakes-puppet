@@ -1,7 +1,6 @@
 node ip-10-0-7-246 {
 	include sshd
 	include apache
-	include fakeFreeze
 	include users
 	include motd
 }
@@ -9,7 +8,6 @@ node ip-10-0-7-246 {
 node ip-10-0-7-136 {
 	include sshd
 	include apache
-	include fakeFreeze
 	include users
 	include motd
 }
