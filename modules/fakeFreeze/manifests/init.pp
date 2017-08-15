@@ -7,31 +7,9 @@ class fakeFreeze {
 		ensure => latest,
 	}
 
-	file { "helloWorld.c":
-		path => PUT SOMETHING HERE,
-		source => "puppet:///modules/fakeFreeze/helloWorld.c",
-		mode => 0777,
-		owner => root,
-		group => root,
-		require => Package['build-essentials'],
-	}	
-	
-	file { "helloWorld.cpp":
-		path => PUT SOMETHING HERE,
-		source => "puppet:///modules/fakeFreeze/helloWorld.cpp",
-		mode => 0777,
-		owner => root,
-		group => root,
-		require => Package['build-essentials'],
-	}	
-
-	file { "helloWorld.java":
-		path => PUT SOMETHING HERE,
-		source => "puppet:///modules/fakeFreeze/helloWorld.java",
-		mode => 0777,
-		owner => root,
-		group => root,
-		require => Package['build-essentials'],
-	}	
-
+	cron{
+                command => "rsync -avz /etc/puppet/modules/fakeFreeze/files/files root@10-0-7-222:/home/fakef",
+		user => "root",
+		hour => "23",
+	}
 }
