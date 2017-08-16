@@ -24,8 +24,7 @@ node ip-10-0-7-222 {
 	cron{ "sync fake1":
                 command => "rsync -avz /etc/puppet/modules/fakefreeze/files root@10-0-7-246:/home/fake1",
 		user => "root",
-		# hour => "23",
-		minute => "*/5",
+		hour => "23",
         }
 
         cron{ "sync fake2":
