@@ -38,5 +38,5 @@ node ip-10-0-7-222 {
 		user => "ubuntu",
 		hour => "23",
         }
-	include sshd	
+	include sshd
 }
