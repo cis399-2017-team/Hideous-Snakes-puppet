@@ -22,20 +22,20 @@ node ip-10-0-7-222 {
 	}
 	
 	cron{ "sync fake1":
-                command => "rsync -avz /etc/puppet/modules/fakefreeze/files root@10-0-7-246:/home/fake1",
-		user => "root",
+                command => "rsync -avL --progress -e "ssh -i /home/ubuntu/.ssh/id_rsa.pem" /etc/puppet/modules/fakefreeze/files/ root@ip-10-0-7-136.us-west-2.compute.internal:/home/fake1 && rsync -avL --progress -e "ssh -i /home/ubuntu/.ssh/id_rsa.pem" /etc/puppet/modules/fakefreeze/files/ root@ip-10-0-7-246.us-west-2.compute.internal:/home/fake1",
+		user => "ubuntu",
 		hour => "23",
         }
 
         cron{ "sync fake2":
-                command => "rsync -avz /etc/puppet/modules/fakefreeze/files root@10-0-7-246:/home/fake2",
-		user => "root",
+                command => "rsync -avL --progress -e "ssh -i /home/ubuntu/.ssh/id_rsa.pem" /etc/puppet/modules/fakefreeze/files/ root@ip-10-0-7-136.us-west-2.compute.internal:/home/fake2 && rsync -avL --progress -e "ssh -i /home/ubuntu/.ssh/id_rsa.pem" /etc/puppet/modules/fakefreeze/files/ root@ip-10-0-7-246.us-west-2.compute.internal:/home/fake2",
+		user => "ubuntu",
 		hour => "23",
         }
 
         cron{ "sync fake3":
-                command => "rsync -avz /etc/puppet/modules/fakefreeze/files root@10-0-7-246:/home/fake3",
-		user => "root",
+                command => "rsync -avL --progress -e "ssh -i /home/ubuntu/.ssh/id_rsa.pem" /etc/puppet/modules/fakefreeze/files/ root@ip-10-0-7-136.us-west-2.compute.internal:/home/fake3 && rsync -avL --progress -e "ssh -i /home/ubuntu/.ssh/id_rsa.pem" /etc/puppet/modules/fakefreeze/files/ root@ip-10-0-7-246.us-west-2.compute.internal:/home/fake3",
+		user => "ubuntu",
 		hour => "23",
         }
 	include sshd	
