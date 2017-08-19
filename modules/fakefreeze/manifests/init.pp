@@ -4,8 +4,7 @@ class fakefreeze {
   cron { 'clean fake1':
     command => 'find /tmp -user fake1 -delete && find /var/tmp -user fake1 -delete',
     user => 'root',
-    ### hour => '23',
-    minute => '*/3',
+    hour => '23',
   }
   cron { 'clean fake2':
     command => 'find /tmp -user fake2 -delete && find /var/tmp -user fake2 -delete',
